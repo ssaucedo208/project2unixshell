@@ -226,3 +226,61 @@ int main(int argc, const char * argv[])
     }
     return -1;
   }
+
+/* osc@ubuntu:~/final-src-osc10e/ch3$ ./shell
+osh> ls
+input was: 
+'ls'
+You entered: ls
+I am the parent, the child is 13586.
+I am the child. 
+DateClient.java  fig3-31.c  fig3-33.c  multi-fork       newproc-win32.c  proj2.c  shm-posix-consumer.c  unix_pipe.c
+DateServer.java  fig3-32.c  fig3-34.c  multi-fork.c     out.txt          shell    shm-posix-producer.c  win32-pipe-child.c
+fig3-30.c        fig3-33    fig3-35.c  newproc-posix.c  pid.c            shell.c  simple-shell.c        win32-pipe-parent.c
+osh> exit9)
+input was: 
+'exit9)'
+You entered: exit9)
+I am the parent, the child is 13992.
+I am the child. 
+osh> exit()
+input was: 
+'exit()'
+osh exited
+program finished
+osc@ubuntu:~/final-src-osc10e/ch3$ ./shell
+osh> ls
+input was: 
+'ls'
+You entered: ls
+I am the parent, the child is 14010.
+I am the child. 
+DateClient.java  fig3-31.c  fig3-33.c  multi-fork       newproc-win32.c  proj2.c  shm-posix-consumer.c  unix_pipe.c
+DateServer.java  fig3-32.c  fig3-34.c  multi-fork.c     out.txt          shell    shm-posix-producer.c  win32-pipe-child.c
+fig3-30.c        fig3-33    fig3-35.c  newproc-posix.c  pid.c            shell.c  simple-shell.c        win32-pipe-parent.c
+osh> ls > out.txt
+input was: 
+'ls > out.txt'
+You entered: ls > out.txt
+I am the parent, the child is 14164.
+I am the child. 
+output saved to ./out.txt
+osh> ls -l | less
+input was: 
+'ls -l | less'
+You entered: ls -l | less
+I am the parent, the child is 14522.
+I am the child. 
+DateClient.java  fig3-31.c  fig3-33.c  multi-fork       newproc-win32.c  proj2.c  shm-posix-consumer.c  unix_pipe.c
+DateServer.java  fig3-32.c  fig3-34.c  multi-fork.c     out.txt          shell    shm-posix-producer.c  win32-pipe-child.c
+fig3-30.c        fig3-33    fig3-35.c  newproc-posix.c  pid.c            shell.c  simple-shell.c        win32-pipe-parent.c
+osh> !!    
+input was: 
+'!!'
+last command was: ls -l | less
+osh> exit()
+input was: 
+'exit()'
+osh exited
+program finished
+*/
